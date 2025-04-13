@@ -26,9 +26,9 @@ public class CityController {
 	private CityService service;
 	
 	@GetMapping
-	public ResponseEntity<List<CityDTO>> findAll() {
+	public ResponseEntity<List<CityDTO>> findAllSortedByName() {
 		
-		List<CityDTO> result = service.findAll();		
+		List<CityDTO> result = service.findAllSortedByName();		
 		return ResponseEntity.ok().body(result);
 	}
 	

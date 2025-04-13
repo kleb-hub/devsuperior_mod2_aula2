@@ -27,7 +27,7 @@ public class CityService {
 
 	
 	@Transactional(readOnly = true)
-	public List<CityDTO> findAll() {
+	public List<CityDTO> findAllSortedByName() {
 		
 		List<City> result = repository.findAll();
 		result.sort(Comparator.comparing(City::getName));
